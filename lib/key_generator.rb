@@ -1,7 +1,6 @@
 class KeyGenerator
 
   def self.generate(master = self.make_master)
-    # require "pry"; binding.pry
     keys = [master[0..1], master[1..2],master[2..3],master[3..4]]
     keys.map(&:to_i)
   end
