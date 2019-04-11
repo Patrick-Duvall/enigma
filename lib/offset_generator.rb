@@ -1,7 +1,7 @@
 class OffsetGenerator
 
 
-  def self.generate(ddmmyy)
+  def self.generate(ddmmyy=self.convert_date  )
     (ddmmyy * ddmmyy).to_s[-4..-1].split('').map(&:to_i)
   end
 
