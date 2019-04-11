@@ -19,6 +19,8 @@ require "./spec/spec_helper"
 
 
     it 'rotates back around to a' do
+      cipher = CaeserCipher.new(4)
+      expect('a').to eq(cipher.rotate('w', 1))
 
   end
 
