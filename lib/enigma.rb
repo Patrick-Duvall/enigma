@@ -8,4 +8,10 @@ class Enigma
     offsets = OffsetGenerator.generate(ddmmyy)
   end
 
+  def rotate(string, masterkey, ddmmyy)
+    keys = KeyGenerator.generate(masterkey)
+    ciphers = keys.map{|key|CaeserCipher.new(key)}
+    offsets = OffsetGenerator.generate(ddmmyy)
+  end
+
 end
