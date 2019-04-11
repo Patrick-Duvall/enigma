@@ -10,7 +10,7 @@ class CaeserCipher
   def rotate(letter, offset)
     # require "pry"; binding.pry
      num = @rotor.find{|k,v| v == letter }[0]
-     (num += offset) % 27
+     (num += (offset + key) ) % 27
      @rotor[num]
   end
 
