@@ -1,7 +1,7 @@
 class CaeserCipher
   attr_reader :key, :rotor
-  def initialize(key, offset)
-    @key = key + offset
+  def initialize(key)
+    @key = key 
     chars = ("a".."z").to_a << " "
     nums = (0..26).to_a
     @rotor = nums.zip(chars).to_h

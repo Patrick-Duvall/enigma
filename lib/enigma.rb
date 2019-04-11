@@ -18,7 +18,8 @@ class Enigma
 
     offsets = OffsetGenerator.generate(ddmmyy)
     keys = KeyGenerator.generate(masterkey)
-      require "pry"; binding.pry
+    cipher_keys = keys.zip(offsets).map(&:sum)
+    
   end
 
 
