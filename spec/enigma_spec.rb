@@ -16,7 +16,11 @@ describe Enigma do
     }
     enigma = Enigma.new
     expect(expected).to eq(enigma.encrypt("hello world", "02715", "040895"))
-
   end
 
-end
+  it 'makes ciphers' do
+    enigma = Enigma.new
+    expect(enigma.make_ciphers('02715', '040895').each{|cipher| cipher.is_a?(CaeserCipher)})
+    end
+
+  end

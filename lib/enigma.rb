@@ -14,4 +14,12 @@ class Enigma
     offsets = OffsetGenerator.generate(ddmmyy)
   end
 
+  def make_ciphers(masterkey, ddmmyy)
+
+    offsets = OffsetGenerator.generate(ddmmyy)
+    keys = KeyGenerator.generate(masterkey)
+      require "pry"; binding.pry
+  end
+
+
 end

@@ -14,26 +14,26 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-04-11T14:39:42-06:00">2019-04-11T14:39:42-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-04-11T14:50:58-06:00">2019-04-11T14:50:58-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">95.0%</span></span>
+    (<span class="covered_percent"><span class="green">95.59%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.46
+         2.38
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>7</b> files in total.
-    <b>60</b> relevant lines. 
-    <span class="green"><b>57</b> lines covered</span> and
+    <b>68</b> relevant lines. 
+    <span class="green"><b>65</b> lines covered</span> and
     <span class="red"><b>3</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -62,12 +62,12 @@
       
       <tr>
         <td class="strong"><a href="#691e019e1b605267b7a2e774bd025d70a6d397b5" class="src_link" title="lib/enigma.rb">lib/enigma.rb</a></td>
-        <td class="red strong">66.67 %</td>
-        <td>17</td>
-        <td>9</td>
-        <td>6</td>
+        <td class="red strong">76.92 %</td>
+        <td>25</td>
+        <td>13</td>
+        <td>10</td>
         <td>3</td>
-        <td>0.7</td>
+        <td>0.8</td>
       </tr>
       
       <tr>
@@ -77,25 +77,25 @@
         <td>9</td>
         <td>9</td>
         <td>0</td>
-        <td>2.6</td>
+        <td>2.8</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#d0d7df47820ec340979809f2f01d015d469964ef" class="src_link" title="lib/offset_generator.rb">lib/offset_generator.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>12</td>
-        <td>5</td>
-        <td>5</td>
+        <td>13</td>
+        <td>6</td>
+        <td>6</td>
         <td>0</td>
-        <td>1.6</td>
+        <td>2.2</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#d435a3bbfd0ed52db0da53445f0bafd27e3e4867" class="src_link" title="spec/enigma_spec.rb">spec/enigma_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>22</td>
-        <td>9</td>
-        <td>9</td>
+        <td>26</td>
+        <td>12</td>
+        <td>12</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -254,10 +254,10 @@
         <div class="source_table" id="691e019e1b605267b7a2e774bd025d70a6d397b5">
   <div class="header">
     <h3>lib/enigma.rb</h3>
-    <h4><span class="red">66.67 %</span> covered</h4>
+    <h4><span class="red">76.92 %</span> covered</h4>
     <div>
-      <b>9</b> relevant lines. 
-      <span class="green"><b>6</b> lines covered</span> and
+      <b>13</b> relevant lines. 
+      <span class="green"><b>10</b> lines covered</span> and
       <span class="red"><b>3</b> lines missed.</span>
     </div>
   </div>
@@ -361,7 +361,55 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def make_ciphers(masterkey, ddmmyy)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    offsets = OffsetGenerator.generate(ddmmyy)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    keys = KeyGenerator.generate(masterkey)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      require &quot;pry&quot;; binding.pry</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
           
           
           <code class="ruby">end</code>
@@ -404,14 +452,14 @@
           <code class="ruby">  def self.generate(master = self.make_master)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="4">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="4">
+          <span class="hits">5</span>
           
           <code class="ruby">    keys = [master[0..1], master[1..2],master[2..3],master[3..4]]</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="5">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="5" data-linenumber="5">
+          <span class="hits">5</span>
           
           <code class="ruby">    keys.map(&amp;:to_i)</code>
         </li>
@@ -486,8 +534,8 @@
     <h3>lib/offset_generator.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>5</b> relevant lines. 
-      <span class="green"><b>5</b> lines covered</span> and
+      <b>6</b> relevant lines. 
+      <span class="green"><b>6</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -516,52 +564,58 @@
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">  def self.generate(ddmmyy=self.convert_date  )</code>
+          <code class="ruby">  def self.generate(ddmmyy=self.convert_date)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="5">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="5">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    ddmmyy = ddmmyy.to_i</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="6">
+          <span class="hits">4</span>
           
           <code class="ruby">    (ddmmyy * ddmmyy).to_s[-4..-1].split(&#39;&#39;).map(&amp;:to_i)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="6">
-          
-          
-          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="8">
+        <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
           <code class="ruby">  def self.convert_date</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="9">
+        <li class="covered" data-hits="2" data-linenumber="10">
           <span class="hits">2</span>
           
-          <code class="ruby">    Time.now.strftime(&quot;%d%m%y&quot;).to_i</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="10">
-          
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    Time.now.strftime(&quot;%d%m%y&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="11">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby">end</code>
@@ -577,8 +631,8 @@
     <h3>spec/enigma_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>9</b> relevant lines. 
-      <span class="green"><b>9</b> lines covered</span> and
+      <b>12</b> relevant lines. 
+      <span class="green"><b>12</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -697,25 +751,49 @@
         <li class="never" data-hits="" data-linenumber="19">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="20">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="21">
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;makes ciphers&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    enigma = Enigma.new</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(enigma.make_ciphers(&#39;02715&#39;, &#39;040895&#39;).each{|cipher| cipher.is_a?(CaeserCipher)})</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="never" data-hits="" data-linenumber="26">
           
           
-          <code class="ruby">end</code>
+          <code class="ruby">  end</code>
         </li>
       
     </ol>
@@ -891,7 +969,7 @@
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect([5,5,6,1]).to eq(OffsetGenerator.generate(110419))</code>
+          <code class="ruby">      expect([5,5,6,1]).to eq(OffsetGenerator.generate(&#39;110419&#39;))</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
@@ -915,7 +993,7 @@
         <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(110419).to eq( OffsetGenerator.convert_date)</code>
+          <code class="ruby">      expect(&#39;110419&#39;).to eq( OffsetGenerator.convert_date)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="11">
