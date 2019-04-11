@@ -12,6 +12,16 @@ require "./spec/spec_helper"
 
     end
 
+    it 'will include spaces' do
+      cipher = CaeserCipher.new(4)
+      expect(' ').to eq(cipher.rotate('w', 0))
+    end
+
+
+    it 'rotates back around to a' do
+
+  end
+
 
 
   end
