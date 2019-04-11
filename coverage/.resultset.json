@@ -37,6 +37,11 @@
         1,
         null,
         null,
+        1,
+        1,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/patrickduvall/turing/1module/projects/enigma/spec/enigma_spec.rb": [
@@ -62,9 +67,13 @@
         1,
         null,
         null,
+        1,
+        1,
+        null,
+        null,
         null
       ]
     },
-    "timestamp": 1555005360
+    "timestamp": 1555008736
   }
 }

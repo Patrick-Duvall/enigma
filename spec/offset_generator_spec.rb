@@ -6,6 +6,8 @@ require "./spec/spec_helper"
       expect([5,5,6,1]).to eq(OffsetGenerator.generate(110419))
     end
 
-    it 'converts a date to 6 digit ddmmyy format'
+    it 'converts a todays date to 6 digit ddmmyy format' do
+      expect(110419).to eq( OffsetGenerator.convert_date)
+    end
 
   end

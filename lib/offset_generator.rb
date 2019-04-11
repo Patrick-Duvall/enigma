@@ -6,7 +6,7 @@ class OffsetGenerator
   end
 
   def self.convert_date
-
+    Time.now.strftime("%d%m%y").to_i
   end
 
 end
