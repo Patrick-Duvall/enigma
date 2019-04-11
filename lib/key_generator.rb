@@ -6,10 +6,9 @@ class KeyGenerator
   end
 
   def self.make_master
-    master = (1..99999).to_a.sample
+    master = rand(1..99999)
     master = master.to_s
-    require "pry"; binding.pry
-    master = master.rjust(1,'0') until master.length == 5
+    master = ('0' + master) until master.length == 5
     master
   end
 
