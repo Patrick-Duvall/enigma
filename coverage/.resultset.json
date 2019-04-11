@@ -29,6 +29,21 @@
         null,
         null
       ],
+      "/Users/patrickduvall/turing/1module/projects/enigma/lib/offset_generator.rb": [
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/patrickduvall/turing/1module/projects/enigma/spec/enigma_spec.rb": [
         null,
         1,
@@ -42,8 +57,23 @@
         null,
         null,
         null
+      ],
+      "/Users/patrickduvall/turing/1module/projects/enigma/spec/offset_generator_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
       ]
     },
-    "timestamp": 1555000549
+    "timestamp": 1555008736
   }
 }
