@@ -15,7 +15,7 @@ require "./spec/spec_helper"
       expect(' ').to eq(cipher.rotate('w'))
     end
 
-    it 'rotates back around to a' do
+    it 'rotates back around to z to a' do
       cipher = Cipher.new(5)
       expect('a').to eq(cipher.rotate('w'))
     end
@@ -23,5 +23,17 @@ require "./spec/spec_helper"
     it ' reverse ciphers a single letter' do
       expect('a').to eq(@cipher.reverse_rotate('c'))
     end
+
+    it 'will include spaces on reverse rotates ' do
+      cipher = Cipher.new(3)
+      expect(' ').to eq(cipher.reverse_rotate('c'))
+    end
+
+    it 'reverse rotates back around to from a to z' do
+      cipher = Cipher.new(5)
+      expect('w').to eq(cipher.reverse_rotate('a'))
+    end
+
+
 
   end
