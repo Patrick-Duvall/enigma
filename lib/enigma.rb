@@ -11,6 +11,15 @@ class Enigma
       date: ddmmyy
     }
   end
+
+  def decrypt(string, masterkey, ddmmyy)
+    decrypted = reverse_rotate(string, masterkey, ddmmyy)
+    {
+      decryption: decrypted,
+      key: masterkey,
+      date: ddmmyy
+    }
+  end
 #I checked the rubric this doesnt break anythng, 7 lines
   def rotate(string, masterkey, ddmmyy)
     ciphers = make_ciphers(masterkey, ddmmyy)
