@@ -1,6 +1,5 @@
 require "./spec/spec_helper"
 
-
 class Enigma
 
   def lowcase?(letter)
@@ -51,6 +50,5 @@ class Enigma
     cipher_keys = keys.zip(offsets).map(&:sum)
     cipher_keys.map{|key|Cipher.new(key)}
   end
-
 
 end
