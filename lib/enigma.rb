@@ -3,6 +3,10 @@ require "./spec/spec_helper"
 
 class Enigma
 
+  def lowcase?(letter)
+    letter.match?(/[a-z ]/)
+  end
+
   def encrypt(string, masterkey, ddmmyy)
     encrypted = rotate(string, masterkey, ddmmyy)
     {
@@ -20,15 +24,15 @@ class Enigma
       date: ddmmyy
     }
   end
-#I checked the rubric this doesnt break anythng, 7 lines
+
   def rotate(string, masterkey, ddmmyy)
     ciphers = make_ciphers(masterkey, ddmmyy)
     counter = 0 ;   retval = ''
-    string.split('').each { |letter|
+    string.split('').each do |letter|
       retval += letter unless letter.match?(/[a-z ]/)
-        retval += ciphers[counter % 4].rotate(letter) if letter.match?(/[a-z ]/)
-        counter += 1 if letter.match?(/[a-z ]/) }
-    retval
+      retval += ciphers[counter % 4].rotate(letter) if letter.match?(/[a-z ]/)
+      counter += 1 if letter.match?(/[a-z ]/)
+    end ; retval
   end
 
   def reverse_rotate(string, masterkey, ddmmyy)
@@ -36,9 +40,9 @@ class Enigma
     counter = 0 ;   retval = ''
     string.split('').each { |letter|
       retval += letter unless letter.match?(/[a-z ]/)
-        retval += ciphers[counter % 4].reverse_rotate(letter) if letter.match?(/[a-z ]/)
-        counter += 1 if letter.match?(/[a-z ]/) }
-    retval
+      retval += ciphers[counter % 4].reverse(letter) if letter.match?(/[a-z ]/)
+      counter += 1 if letter.match?(/[a-z ]/)
+      } ; retval
   end
 
   def make_ciphers(masterkey, ddmmyy)

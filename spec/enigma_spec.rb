@@ -8,6 +8,15 @@ describe Enigma do
     expect(enigma).to be_an(Enigma)
   end
 
+  it 'checks valid letters' do
+    enigma = Enigma.new
+    expect(true).to eq(enigma.lowcase?('a'))
+    expect(false).to eq(enigma.lowcase?('A'))
+    expect(true).to eq(enigma.lowcase?(' '))
+  end
+
+
+
   it 'encrypts a message with key and date' do
     expected = {
       encryption: "keder ohulw",
