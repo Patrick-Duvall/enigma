@@ -16,7 +16,6 @@ describe Enigma do
   end
 
 
-
   it 'encrypts a message with key and date' do
     expected = {
       encryption: "keder ohulw",

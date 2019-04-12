@@ -29,9 +29,9 @@ class Enigma
     ciphers = make_ciphers(masterkey, ddmmyy)
     counter = 0 ;   retval = ''
     string.split('').each do |letter|
-      retval += letter unless letter.match?(/[a-z ]/)
-      retval += ciphers[counter % 4].rotate(letter) if letter.match?(/[a-z ]/)
-      counter += 1 if letter.match?(/[a-z ]/)
+      retval += letter unless lowcase?(letter)
+      retval += ciphers[counter % 4].rotate(letter) if lowcase?(letter)
+      counter += 1 if lowcase?(letter)
     end ; retval
   end
 
@@ -39,9 +39,9 @@ class Enigma
     ciphers = make_ciphers(masterkey, ddmmyy)
     counter = 0 ;   retval = ''
     string.split('').each { |letter|
-      retval += letter unless letter.match?(/[a-z ]/)
-      retval += ciphers[counter % 4].reverse(letter) if letter.match?(/[a-z ]/)
-      counter += 1 if letter.match?(/[a-z ]/)
+      retval += letter unless lowcase?(letter)
+      retval += ciphers[counter % 4].reverse(letter) if lowcase?(letter)
+      counter += 1 if lowcase?(letter)
       } ; retval
   end
 
