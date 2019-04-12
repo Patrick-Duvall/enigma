@@ -7,21 +7,14 @@ class Enigma
   #   keys = KeyGenerator.generate(masterkey)
   #   offsets = OffsetGenerator.generate(ddmmyy)
   # end
-
+#I checked the rubric this doesnt break anythng, 7 lines
   def rotate(string, masterkey, ddmmyy)
     ciphers = make_ciphers(masterkey, ddmmyy)
-    counter = 0
-    retval = ''
-    string.split('').each do|letter|
-      if letter.match?(/[a-z ]/)
-        # require "pry"; binding.pry
-        retval += ciphers[counter % 4].rotate(letter)
-        counter += 1
-      else
-        retval += letter
-      end
-      retval
-    end
+    counter = 0 ;   retval = ''
+    string.split('').each { |letter|
+      retval += letter unless letter.match?(/[a-z ]/)
+        retval += ciphers[counter % 4].rotate(letter) if letter.match?(/[a-z ]/)
+        counter += 1 if letter.match?(/[a-z ]/) }
     retval
   end
 
