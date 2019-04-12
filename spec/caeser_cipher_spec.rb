@@ -1,9 +1,9 @@
 require "./spec/spec_helper"
 
-  describe CaeserCipher do
+  describe Cipher do
 
     before do
-      @cipher = CaeserCipher.new(2)
+      @cipher = Cipher.new(2)
     end
 
     it 'ciphers a single letter' do
@@ -11,13 +11,29 @@ require "./spec/spec_helper"
     end
 
     it 'will include spaces' do
-      cipher = CaeserCipher.new(4)
+      cipher = Cipher.new(4)
       expect(' ').to eq(cipher.rotate('w'))
     end
 
-    it 'rotates back around to a' do
-      cipher = CaeserCipher.new(5)
+    it 'rotates back around to z to a' do
+      cipher = Cipher.new(5)
       expect('a').to eq(cipher.rotate('w'))
     end
+
+    it ' reverse ciphers a single letter' do
+      expect('a').to eq(@cipher.reverse_rotate('c'))
+    end
+
+    it 'will include spaces on reverse rotates ' do
+      cipher = Cipher.new(3)
+      expect(' ').to eq(cipher.reverse_rotate('c'))
+    end
+
+    it 'reverse rotates back around to from a to z' do
+      cipher = Cipher.new(5)
+      expect('w').to eq(cipher.reverse_rotate('a'))
+    end
+
+
 
   end

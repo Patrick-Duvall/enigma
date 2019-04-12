@@ -22,11 +22,21 @@ class Enigma
     retval
   end
 
+  def reverse_rotate(string, masterkey, ddmmyy)
+    ciphers = make_ciphers(masterkey, ddmmyy)
+    counter = 0 ;   retval = ''
+    string.split('').each { |letter|
+      retval += letter unless letter.match?(/[a-z ]/)
+        retval += ciphers[counter % 4].reverse_rotate(letter) if letter.match?(/[a-z ]/)
+        counter += 1 if letter.match?(/[a-z ]/) }
+    retval
+  end
+
   def make_ciphers(masterkey, ddmmyy)
     offsets = OffsetGenerator.generate(ddmmyy)
     keys = KeyGenerator.generate(masterkey)
     cipher_keys = keys.zip(offsets).map(&:sum)
-    cipher_keys.map{|key|CaeserCipher.new(key)}
+    cipher_keys.map{|key|Cipher.new(key)}
   end
 
 

@@ -20,7 +20,7 @@ describe Enigma do
 
   it 'makes ciphers' do
     enigma = Enigma.new
-    expect(enigma.make_ciphers('02715', '040895').each{|cipher| cipher.is_a?(CaeserCipher)})
+    expect(enigma.make_ciphers('02715', '040895').each{|cipher| cipher.is_a?(Cipher)})
     end
 
     it 'rotates a string' do
