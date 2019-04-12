@@ -35,7 +35,12 @@ describe Enigma do
         date: "040895"
       }
       enigma = Enigma.new
-      expect(expected).to eq(enigma.decrypt("hello world", "02715", "040895"))
+      expect(expected).to eq(enigma.decrypt("keder ohulw", "02715", "040895"))
+    end
+
+    it 'reverse rotates a string' do
+      enigma = Enigma.new
+      expect(enigma.reverse_rotate("keder ohulw", "02715", "040895")).to eq("hello world")
     end
 
 
