@@ -27,7 +27,7 @@ class Enigma
 
   def rotate(string, masterkey, ddmmyy)
     ciphers = make_ciphers(masterkey, ddmmyy)
-    counter = 0 ;   retval = ''
+    counter = 0 ;   retval = '' ; string = string.downcase
     string.split('').each do |letter|
       retval += letter unless lowcase?(letter)
       retval += ciphers[counter % 4].rotate(letter) if lowcase?(letter)
@@ -37,7 +37,7 @@ class Enigma
 
   def reverse_rotate(string, masterkey, ddmmyy)
     ciphers = make_ciphers(masterkey, ddmmyy)
-    counter = 0 ;   retval = ''
+    counter = 0 ;   retval = '' ; string = string.downcase
     string.split('').each { |letter|
       retval += letter unless lowcase?(letter)
       retval += ciphers[counter % 4].reverse_rotate(letter) if lowcase?(letter)
