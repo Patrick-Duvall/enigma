@@ -15,5 +15,5 @@ master_key = ARGV[2]
 date =  ARGV[3]
 decrypted = enigma.encrypt(to_decrypt, master_key, date)[:encryption]
 
-File.write(output, encrypted)
+File.write(output, decrypted)
 puts "Created '#{output}' with the key #{master_key} and date #{date}"
