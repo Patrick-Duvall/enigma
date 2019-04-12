@@ -5,10 +5,15 @@ if ARGV.length != 2
   exit
 end
 
+input = ARGV[0]
+output = ARGV[1]
+
 to_encrypt = File.read(ARGV[0])
 
 enigma = Enigma.new
-encrypted = enigma.encrypt(to_encrypt, KeyGenerator.make_master, OffsetGenerator.convert_date)
+master_key = KeyGenerator.make_master
+date =  OffsetGenerator.convert_date
+encrypted = enigma.encrypt(to_encrypt, master_key, date)[:encryption]
 
-File.write(ARGV[1], encrypted[:encryption])
-puts "Created '#{ARGV[1]}' with the key #{encrypted[:key]} and date #{encrypted[:date]}"
+File.write(output, encrypted)
+puts "Created '#{output}' with the key #{master_key} and date #{date}"

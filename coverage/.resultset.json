@@ -4,7 +4,6 @@
       "/Users/patrickduvall/turing/1module/projects/enigma/lib/enigma.rb": [
         1,
         null,
-        null,
         1,
         null,
         1,
@@ -54,7 +53,6 @@
         1,
         1,
         5,
-        null,
         null,
         null,
         null
@@ -115,6 +113,6 @@
         null
       ]
     },
-    "timestamp": 1555088580
+    "timestamp": 1555089411
   }
 }
