@@ -26,7 +26,7 @@ class Enigma
     offsets = OffsetGenerator.generate(ddmmyy)
     keys = KeyGenerator.generate(masterkey)
     cipher_keys = keys.zip(offsets).map(&:sum)
-    cipher_keys.map{|key|CaeserCipher.new(key)}
+    cipher_keys.map{|key|Cipher.new(key)}
   end
 
 
