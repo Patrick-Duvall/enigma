@@ -13,4 +13,9 @@ class Cipher
      @rotor[num]
   end
 
+  def reverse_rotate(letter)
+    num = @rotor.find{|k,v| v == letter }[0]
+    num = (num - key) % 27
+    @rotor[num]
+  end
 end

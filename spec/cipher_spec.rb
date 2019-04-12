@@ -21,7 +21,7 @@ require "./spec/spec_helper"
     end
 
     it ' reverse ciphers a single letter' do
-      expect('c').to eq(@cipher.rotate('a'))
+      expect('a').to eq(@cipher.reverse_rotate('c'))
     end
 
   end
