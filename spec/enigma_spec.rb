@@ -18,8 +18,6 @@ describe Enigma do
     expect(expected).to eq(enigma.encrypt("hello world", "02715", "040895"))
   end
 
-
-
   it 'makes ciphers' do
     enigma = Enigma.new
     expect(enigma.make_ciphers('02715', '040895').each{|cipher| cipher.is_a?(CaeserCipher)})
@@ -29,5 +27,16 @@ describe Enigma do
       enigma = Enigma.new
       expect(enigma.rotate("hello world", "02715", "040895")).to eq("keder ohulw")
     end
+
+    it 'decrypts a message with key and date' do
+      expected = {
+        decryption: "hello world",
+        key: "02715",
+        date: "040895"
+      }
+      enigma = Enigma.new
+      expect(expected).to eq(enigma.decrypt("hello world", "02715", "040895"))
+    end
+
 
   end
