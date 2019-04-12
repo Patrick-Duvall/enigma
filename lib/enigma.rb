@@ -3,10 +3,14 @@ require "./spec/spec_helper"
 
 class Enigma
 
-  # def encrypt(string, masterkey, ddmmyy)
-  #   keys = KeyGenerator.generate(masterkey)
-  #   offsets = OffsetGenerator.generate(ddmmyy)
-  # end
+  def encrypt(string, masterkey, ddmmyy)
+    encrypted = rotate(string, masterkey, ddmmyy)
+    {
+      encryption: encrypted,
+      key: masterkey,
+      date: ddmmyy
+    }
+  end
 #I checked the rubric this doesnt break anythng, 7 lines
   def rotate(string, masterkey, ddmmyy)
     ciphers = make_ciphers(masterkey, ddmmyy)

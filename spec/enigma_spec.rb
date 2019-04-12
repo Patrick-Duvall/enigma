@@ -9,7 +9,6 @@ describe Enigma do
   end
 
   it 'encrypts a message with key and date' do
-    skip
     expected = {
       encryption: "keder ohulw",
       key: "02715",
