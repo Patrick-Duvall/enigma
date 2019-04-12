@@ -9,7 +9,9 @@ to_encrypt = File.read(ARGV[0])
 puts to_encrypt
 
 enigma = Enigma.new
-enigma.encrypt(to_encrypt, KeyGenerator.make_master, OffsetGenerator.convert_date)
+encrypted = enigma.encrypt(to_encrypt, KeyGenerator.make_master, OffsetGenerator.convert_date)
+
+File.write(ARGV[1], encrypted[:encryption])
 
 require "pry"; binding.pry
 
