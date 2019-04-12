@@ -40,7 +40,7 @@ class Enigma
     counter = 0 ;   retval = ''
     string.split('').each { |letter|
       retval += letter unless lowcase?(letter)
-      retval += ciphers[counter % 4].reverse(letter) if lowcase?(letter)
+      retval += ciphers[counter % 4].reverse_rotate(letter) if lowcase?(letter)
       counter += 1 if lowcase?(letter)
       } ; retval
   end
