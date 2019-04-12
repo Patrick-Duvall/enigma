@@ -6,13 +6,9 @@ if ARGV.length != 2
 end
 
 to_encrypt = File.read(ARGV[0])
-puts to_encrypt
 
 enigma = Enigma.new
 encrypted = enigma.encrypt(to_encrypt, KeyGenerator.make_master, OffsetGenerator.convert_date)
 
 File.write(ARGV[1], encrypted[:encryption])
-
-require "pry"; binding.pry
-
-puts encrypted
+puts "Created '#{ARGV[1]}' with the key #{encrypted[:key]} and date #{encrypted[:date]}"
