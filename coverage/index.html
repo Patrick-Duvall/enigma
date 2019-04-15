@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-04-15T16:34:54-06:00">2019-04-15T16:34:54-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-04-15T16:44:08-06:00">2019-04-15T16:44:08-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">57.97%</span></span>
+    (<span class="covered_percent"><span class="red">51.57%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         21728.38
+         8.25
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>7</b> files in total.
-    <b>138</b> relevant lines. 
-    <span class="green"><b>80</b> lines covered</span> and
-    <span class="red"><b>58</b> lines missed </span>
+    <b>159</b> relevant lines. 
+    <span class="green"><b>82</b> lines covered</span> and
+    <span class="red"><b>77</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -57,47 +57,47 @@
         <td>15</td>
         <td>12</td>
         <td>3</td>
-        <td>136772.5</td>
+        <td>73.1</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#691e019e1b605267b7a2e774bd025d70a6d397b5" class="src_link" title="lib/enigma.rb">lib/enigma.rb</a></td>
-        <td class="red strong">66.67 %</td>
-        <td>94</td>
-        <td>45</td>
-        <td>30</td>
-        <td>15</td>
-        <td>19750.0</td>
+        <td class="red strong">57.58 %</td>
+        <td>104</td>
+        <td>66</td>
+        <td>38</td>
+        <td>28</td>
+        <td>2.8</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#c0e375ca29950ba0f306f8ea0246c4350eba583d" class="src_link" title="lib/key_generator.rb">lib/key_generator.rb</a></td>
-        <td class="red strong">57.14 %</td>
+        <td class="red strong">42.86 %</td>
         <td>17</td>
         <td>7</td>
-        <td>4</td>
         <td>3</td>
-        <td>5933.3</td>
+        <td>4</td>
+        <td>0.4</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#d0d7df47820ec340979809f2f01d015d469964ef" class="src_link" title="lib/offset_generator.rb">lib/offset_generator.rb</a></td>
-        <td class="green strong">100.0 %</td>
+        <td class="red strong">50.0 %</td>
         <td>12</td>
         <td>6</td>
-        <td>6</td>
-        <td>0</td>
-        <td>2769.3</td>
+        <td>3</td>
+        <td>3</td>
+        <td>0.5</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#d435a3bbfd0ed52db0da53445f0bafd27e3e4867" class="src_link" title="spec/enigma_spec.rb">spec/enigma_spec.rb</a></td>
-        <td class="red strong">38.3 %</td>
+        <td class="red strong">34.04 %</td>
         <td>93</td>
         <td>47</td>
-        <td>18</td>
-        <td>29</td>
-        <td>0.4</td>
+        <td>16</td>
+        <td>31</td>
+        <td>0.3</td>
       </tr>
       
       <tr>
@@ -168,26 +168,26 @@
           <code class="ruby">  def initialize(key)</code>
         </li>
       
-        <li class="covered" data-hits="33224" data-linenumber="4">
-          <span class="hits">33224</span>
+        <li class="covered" data-hits="40" data-linenumber="4">
+          <span class="hits">40</span>
           
           <code class="ruby">    @key = key</code>
         </li>
       
-        <li class="covered" data-hits="33224" data-linenumber="5">
-          <span class="hits">33224</span>
+        <li class="covered" data-hits="40" data-linenumber="5">
+          <span class="hits">40</span>
           
           <code class="ruby">    chars = (&quot;a&quot;..&quot;z&quot;).to_a &lt;&lt; &quot; &quot;</code>
         </li>
       
-        <li class="covered" data-hits="33224" data-linenumber="6">
-          <span class="hits">33224</span>
+        <li class="covered" data-hits="40" data-linenumber="6">
+          <span class="hits">40</span>
           
           <code class="ruby">    nums = (0..26).to_a</code>
         </li>
       
-        <li class="covered" data-hits="33224" data-linenumber="7">
-          <span class="hits">33224</span>
+        <li class="covered" data-hits="40" data-linenumber="7">
+          <span class="hits">40</span>
           
           <code class="ruby">    @rotor = nums.zip(chars).to_h</code>
         </li>
@@ -246,20 +246,20 @@
           <code class="ruby">  def reverse_rotate(letter)</code>
         </li>
       
-        <li class="covered" data-hits="1669506" data-linenumber="17">
-          <span class="hits">1669506</span>
+        <li class="covered" data-hits="821" data-linenumber="17">
+          <span class="hits">821</span>
           
           <code class="ruby">    num = @rotor.find{|k,v| v == letter }[0]</code>
         </li>
       
-        <li class="covered" data-hits="124590" data-linenumber="18">
-          <span class="hits">124590</span>
+        <li class="covered" data-hits="55" data-linenumber="18">
+          <span class="hits">55</span>
           
           <code class="ruby">    num = (num - key) % 27</code>
         </li>
       
-        <li class="covered" data-hits="124590" data-linenumber="19">
-          <span class="hits">124590</span>
+        <li class="covered" data-hits="55" data-linenumber="19">
+          <span class="hits">55</span>
           
           <code class="ruby">    @rotor[num]</code>
         </li>
@@ -284,11 +284,11 @@
         <div class="source_table" id="691e019e1b605267b7a2e774bd025d70a6d397b5">
   <div class="header">
     <h3>lib/enigma.rb</h3>
-    <h4><span class="red">66.67 %</span> covered</h4>
+    <h4><span class="red">57.58 %</span> covered</h4>
     <div>
-      <b>45</b> relevant lines. 
-      <span class="green"><b>30</b> lines covered</span> and
-      <span class="red"><b>15</b> lines missed.</span>
+      <b>66</b> relevant lines. 
+      <span class="green"><b>38</b> lines covered</span> and
+      <span class="red"><b>28</b> lines missed.</span>
     </div>
   </div>
   
@@ -325,8 +325,8 @@
           <code class="ruby">  def lowcase?(letter)</code>
         </li>
       
-        <li class="covered" data-hits="373770" data-linenumber="6">
-          <span class="hits">373770</span>
+        <li class="covered" data-hits="45" data-linenumber="6">
+          <span class="hits">45</span>
           
           <code class="ruby">    letter.match?(/[a-z ]/)</code>
         </li>
@@ -403,8 +403,8 @@
           <code class="ruby">  def decrypt(string, masterkey, ddmmyy=OffsetGenerator.convert_date)</code>
         </li>
       
-        <li class="covered" data-hits="8306" data-linenumber="19">
-          <span class="hits">8306</span>
+        <li class="missed" data-hits="0" data-linenumber="19">
+          
           
           <code class="ruby">    decrypted = reverse_rotate(string, masterkey, ddmmyy)</code>
         </li>
@@ -433,8 +433,8 @@
           <code class="ruby">      date: ddmmyy</code>
         </li>
       
-        <li class="covered" data-hits="8306" data-linenumber="24">
-          <span class="hits">8306</span>
+        <li class="missed" data-hits="0" data-linenumber="24">
+          
           
           <code class="ruby">    }</code>
         </li>
@@ -457,32 +457,32 @@
           <code class="ruby">  def crack(string, ddmmyy=OffsetGenerator.convert_date)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="28">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="28">
+          
           
           <code class="ruby">    masterkey = &quot;00000&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="29">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="29">
+          
           
           <code class="ruby">    until decrypt(string, masterkey, ddmmyy)[:decryption][-4..-1].match?(&#39; end&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="8304" data-linenumber="30">
-          <span class="hits">8304</span>
+        <li class="missed" data-hits="0" data-linenumber="30">
+          
           
           <code class="ruby">      masterkey = (masterkey.to_i) + 1</code>
         </li>
       
-        <li class="covered" data-hits="8304" data-linenumber="31">
-          <span class="hits">8304</span>
+        <li class="missed" data-hits="0" data-linenumber="31">
+          
           
           <code class="ruby">      masterkey = (&#39;0&#39;+ masterkey.to_s) until masterkey.to_s.length == 5</code>
         </li>
       
-        <li class="covered" data-hits="8304" data-linenumber="32">
-          <span class="hits">8304</span>
+        <li class="missed" data-hits="0" data-linenumber="32">
+          
           
           <code class="ruby">      masterkey</code>
         </li>
@@ -493,8 +493,8 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="34">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="34">
+          
           
           <code class="ruby">    decrypt(string, masterkey, ddmmyy)</code>
         </li>
@@ -577,44 +577,44 @@
           <code class="ruby">  def reverse_rotate(string, masterkey, ddmmyy)</code>
         </li>
       
-        <li class="covered" data-hits="8306" data-linenumber="48">
-          <span class="hits">8306</span>
+        <li class="missed" data-hits="0" data-linenumber="48">
+          
           
           <code class="ruby">    ciphers = make_ciphers(masterkey, ddmmyy)</code>
         </li>
       
-        <li class="covered" data-hits="8306" data-linenumber="49">
-          <span class="hits">8306</span>
+        <li class="missed" data-hits="0" data-linenumber="49">
+          
           
           <code class="ruby">    counter = 0 ;   retval = &#39;&#39; ; string = string.downcase</code>
         </li>
       
-        <li class="covered" data-hits="8306" data-linenumber="50">
-          <span class="hits">8306</span>
+        <li class="missed" data-hits="0" data-linenumber="50">
+          
           
           <code class="ruby">    string.split(&#39;&#39;).each { |letter|</code>
         </li>
       
-        <li class="covered" data-hits="124590" data-linenumber="51">
-          <span class="hits">124590</span>
+        <li class="missed" data-hits="0" data-linenumber="51">
+          
           
           <code class="ruby">      retval += letter unless lowcase?(letter)</code>
         </li>
       
-        <li class="covered" data-hits="124590" data-linenumber="52">
-          <span class="hits">124590</span>
+        <li class="missed" data-hits="0" data-linenumber="52">
+          
           
           <code class="ruby">      retval += ciphers[counter % 4].reverse_rotate(letter) if lowcase?(letter)</code>
         </li>
       
-        <li class="covered" data-hits="124590" data-linenumber="53">
-          <span class="hits">124590</span>
+        <li class="missed" data-hits="0" data-linenumber="53">
+          
           
           <code class="ruby">      counter += 1 if lowcase?(letter)</code>
         </li>
       
-        <li class="covered" data-hits="8306" data-linenumber="54">
-          <span class="hits">8306</span>
+        <li class="missed" data-hits="0" data-linenumber="54">
+          
           
           <code class="ruby">      } ; retval</code>
         </li>
@@ -637,26 +637,26 @@
           <code class="ruby">  def make_ciphers(masterkey, ddmmyy)</code>
         </li>
       
-        <li class="covered" data-hits="8306" data-linenumber="58">
-          <span class="hits">8306</span>
+        <li class="missed" data-hits="0" data-linenumber="58">
+          
           
           <code class="ruby">    offsets = OffsetGenerator.generate(ddmmyy)</code>
         </li>
       
-        <li class="covered" data-hits="8306" data-linenumber="59">
-          <span class="hits">8306</span>
+        <li class="missed" data-hits="0" data-linenumber="59">
+          
           
           <code class="ruby">    keys = KeyGenerator.generate(masterkey)</code>
         </li>
       
-        <li class="covered" data-hits="8306" data-linenumber="60">
-          <span class="hits">8306</span>
+        <li class="missed" data-hits="0" data-linenumber="60">
+          
           
           <code class="ruby">    cipher_keys = keys.zip(offsets).map(&amp;:sum)</code>
         </li>
       
-        <li class="covered" data-hits="41530" data-linenumber="61">
-          <span class="hits">41530</span>
+        <li class="missed" data-hits="0" data-linenumber="61">
+          
           
           <code class="ruby">    cipher_keys.map{|key|Cipher.new(key)}</code>
         </li>
@@ -679,38 +679,38 @@
           <code class="ruby">  def smartcrack(string)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="65">
+        <li class="never" data-hits="" data-linenumber="65">
           
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="66">
+          <span class="hits">1</span>
           
           <code class="ruby">    key = 0</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="66">
-          
+        <li class="covered" data-hits="1" data-linenumber="67">
+          <span class="hits">1</span>
           
           <code class="ruby">    a_cipher = Cipher.new(key)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="67">
-          
+        <li class="covered" data-hits="1" data-linenumber="68">
+          <span class="hits">1</span>
           
           <code class="ruby">    until a_cipher.reverse_rotate(string[-1]).match?(&#39;d&#39;)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="68">
-          
-          
-          <code class="ruby">      require &quot;pry&quot;; binding.pry</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="69">
-          
+        <li class="covered" data-hits="6" data-linenumber="69">
+          <span class="hits">6</span>
           
           <code class="ruby">      a_cipher = Cipher.new(key)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="70">
-          
+        <li class="covered" data-hits="6" data-linenumber="70">
+          <span class="hits">6</span>
           
           <code class="ruby">      key +=1</code>
         </li>
@@ -727,124 +727,124 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="73">
+        <li class="covered" data-hits="1" data-linenumber="73">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    # key = 0</code>
+          <code class="ruby">    key = 0</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="74">
+        <li class="covered" data-hits="1" data-linenumber="74">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    # until decrypt(string, masterkey, ddmmyy)[:decryption][-2].match?(&#39;n&#39;)</code>
+          <code class="ruby">    b_cipher = Cipher.new(key)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="75">
+        <li class="covered" data-hits="1" data-linenumber="75">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    #   b_cipher = Cipher.new(key)</code>
+          <code class="ruby">    until b_cipher.reverse_rotate(string[-2]).match?(&#39;n&#39;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="76">
+        <li class="covered" data-hits="6" data-linenumber="76">
+          <span class="hits">6</span>
           
-          
-          <code class="ruby">    #   key +=1</code>
+          <code class="ruby">      b_cipher = Cipher.new(key)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="77">
+        <li class="covered" data-hits="6" data-linenumber="77">
+          <span class="hits">6</span>
           
-          
-          <code class="ruby">    # end</code>
+          <code class="ruby">      key +=1</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="78">
           
           
-          <code class="ruby">    # key = 0</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="79">
           
           
-          <code class="ruby">    # until decrypt(string, masterkey, ddmmyy)[:decryption][-3].match?(&#39;e&#39;)</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="80">
+        <li class="covered" data-hits="1" data-linenumber="80">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    #   c_cipher = Cipher.new(key)</code>
+          <code class="ruby">    key = 0</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="81">
+        <li class="covered" data-hits="1" data-linenumber="81">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    #   key +=1</code>
+          <code class="ruby">    c_cipher = Cipher.new(key)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="82">
+        <li class="covered" data-hits="1" data-linenumber="82">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    # end</code>
+          <code class="ruby">    until c_cipher.reverse_rotate(string[-3]).match?(&#39;e&#39;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="83">
+        <li class="covered" data-hits="15" data-linenumber="83">
+          <span class="hits">15</span>
           
-          
-          <code class="ruby">    # key = 0</code>
+          <code class="ruby">      c_cipher = Cipher.new(key)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="84">
+        <li class="covered" data-hits="15" data-linenumber="84">
+          <span class="hits">15</span>
           
-          
-          <code class="ruby">    # until decrypt(string, masterkey, ddmmyy)[:decryption][-4].match?(&#39; &#39;)</code>
+          <code class="ruby">      key +=1</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="85">
           
           
-          <code class="ruby">    #   d_cipher = Cipher.new(key)</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="86">
           
           
-          <code class="ruby">    #   key +=1</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="87">
-          
-          
-          <code class="ruby">    # end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="88">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="89">
+        <li class="covered" data-hits="1" data-linenumber="87">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    # require &quot;pry&quot;; binding.pry</code>
+          <code class="ruby">    key = 0</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="90">
+        <li class="covered" data-hits="1" data-linenumber="88">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    # decrypt(string, masterkey, ddmmyy)</code>
+          <code class="ruby">    d_cipher = Cipher.new(key)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="91">
+        <li class="covered" data-hits="1" data-linenumber="89">
+          <span class="hits">1</span>
           
+          <code class="ruby">    until d_cipher.reverse_rotate(string[-4]).match?(&#39; &#39;)</code>
+        </li>
+      
+        <li class="covered" data-hits="9" data-linenumber="90">
+          <span class="hits">9</span>
           
-          <code class="ruby"></code>
+          <code class="ruby">      d_cipher = Cipher.new(key)</code>
+        </li>
+      
+        <li class="covered" data-hits="9" data-linenumber="91">
+          <span class="hits">9</span>
+          
+          <code class="ruby">      key +=1</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="92">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="93">
@@ -853,7 +853,67 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="94">
+        <li class="covered" data-hits="1" data-linenumber="94">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    ciphers = [a_cipher, b_cipher, c_cipher, d_cipher]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="95">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="96">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    counter = 0 ;   retval = &#39;&#39; ; string = string.downcase</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="97">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    string.split(&#39;&#39;).reverse_each { |letter|</code>
+        </li>
+      
+        <li class="covered" data-hits="15" data-linenumber="98">
+          <span class="hits">15</span>
+          
+          <code class="ruby">      retval += letter unless lowcase?(letter)</code>
+        </li>
+      
+        <li class="covered" data-hits="15" data-linenumber="99">
+          <span class="hits">15</span>
+          
+          <code class="ruby">      retval += ciphers[counter % 4].reverse_rotate(letter) if lowcase?(letter)</code>
+        </li>
+      
+        <li class="covered" data-hits="15" data-linenumber="100">
+          <span class="hits">15</span>
+          
+          <code class="ruby">      counter += 1 if lowcase?(letter)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="101">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      } ; retval.reverse</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="102">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="103">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="104">
           
           
           <code class="ruby">end</code>
@@ -867,11 +927,11 @@
         <div class="source_table" id="c0e375ca29950ba0f306f8ea0246c4350eba583d">
   <div class="header">
     <h3>lib/key_generator.rb</h3>
-    <h4><span class="red">57.14 %</span> covered</h4>
+    <h4><span class="red">42.86 %</span> covered</h4>
     <div>
       <b>7</b> relevant lines. 
-      <span class="green"><b>4</b> lines covered</span> and
-      <span class="red"><b>3</b> lines missed.</span>
+      <span class="green"><b>3</b> lines covered</span> and
+      <span class="red"><b>4</b> lines missed.</span>
     </div>
   </div>
   
@@ -914,8 +974,8 @@
           <code class="ruby">    # keys.map(&amp;:to_i)</code>
         </li>
       
-        <li class="covered" data-hits="41530" data-linenumber="7">
-          <span class="hits">41530</span>
+        <li class="missed" data-hits="0" data-linenumber="7">
+          
           
           <code class="ruby">    master.to_s.chars.each_cons(2).to_a.map{|el|el[0] + el[1]}.map(&amp;:to_i)</code>
         </li>
@@ -988,11 +1048,11 @@
         <div class="source_table" id="d0d7df47820ec340979809f2f01d015d469964ef">
   <div class="header">
     <h3>lib/offset_generator.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="red">50.0 %</span> covered</h4>
     <div>
       <b>6</b> relevant lines. 
-      <span class="green"><b>6</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <span class="green"><b>3</b> lines covered</span> and
+      <span class="red"><b>3</b> lines missed.</span>
     </div>
   </div>
   
@@ -1017,14 +1077,14 @@
           <code class="ruby">  def self.generate(ddmmyy=self.convert_date)</code>
         </li>
       
-        <li class="covered" data-hits="8306" data-linenumber="4">
-          <span class="hits">8306</span>
+        <li class="missed" data-hits="0" data-linenumber="4">
+          
           
           <code class="ruby">    ddmmyy = ddmmyy.to_i</code>
         </li>
       
-        <li class="covered" data-hits="8306" data-linenumber="5">
-          <span class="hits">8306</span>
+        <li class="missed" data-hits="0" data-linenumber="5">
+          
           
           <code class="ruby">    (ddmmyy * ddmmyy).to_s[-4..-1].split(&#39;&#39;).map(&amp;:to_i)</code>
         </li>
@@ -1047,8 +1107,8 @@
           <code class="ruby">  def self.convert_date</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="9">
+          
           
           <code class="ruby">    Time.now.strftime(&quot;%d%m%y&quot;)</code>
         </li>
@@ -1079,11 +1139,11 @@
         <div class="source_table" id="d435a3bbfd0ed52db0da53445f0bafd27e3e4867">
   <div class="header">
     <h3>spec/enigma_spec.rb</h3>
-    <h4><span class="red">38.3 %</span> covered</h4>
+    <h4><span class="red">34.04 %</span> covered</h4>
     <div>
       <b>47</b> relevant lines. 
-      <span class="green"><b>18</b> lines covered</span> and
-      <span class="red"><b>29</b> lines missed.</span>
+      <span class="green"><b>16</b> lines covered</span> and
+      <span class="red"><b>31</b> lines missed.</span>
     </div>
   </div>
   
@@ -1543,17 +1603,17 @@
         <li class="covered" data-hits="1" data-linenumber="76">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;cracks a code without date&#39;, :focus do</code>
+          <code class="ruby">    it &#39;cracks a code without date&#39;  do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="77">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="77">
+          
           
           <code class="ruby">      enigma = Enigma.new</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="78">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="78">
+          
           
           <code class="ruby">      expected = {</code>
         </li>
@@ -1582,14 +1642,14 @@
           <code class="ruby">      }</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="83">
-          <span class="hits">2</span>
+        <li class="missed" data-hits="0" data-linenumber="83">
+          
           
           <code class="ruby">      Time.stub(:now){Time.new(2018, 10, 29, 01, 04, 44)}</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="84">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="84">
+          
           
           <code class="ruby">      expect(expected).to eq(enigma.crack(&quot;vjqtbeaweqihssi&quot;))</code>
         </li>
@@ -1615,19 +1675,19 @@
         <li class="covered" data-hits="1" data-linenumber="88">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;cracks a code without a date or key not using todays date&#39; do</code>
+          <code class="ruby">    it &#39;cracks a code without a date or key not using todays date&#39;, :focus do</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="89">
-          
+        <li class="covered" data-hits="1" data-linenumber="89">
+          <span class="hits">1</span>
           
           <code class="ruby">      enigma = Enigma.new</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="90">
+        <li class="covered" data-hits="1" data-linenumber="90">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      expect(&quot;hello world end&quot;).to eq(enigma.crack(&quot;vjqtbeaweqihssi&quot;))</code>
+          <code class="ruby">      expect(&quot;hello world end&quot;).to eq(enigma.smartcrack(&quot;vjqtbeaweqihssi&quot;))</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="91">

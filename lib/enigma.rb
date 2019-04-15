@@ -62,33 +62,35 @@ class Enigma
   end
 
   def smartcrack(string)
-    key = 0
-    a_cipher = Cipher.new(key)
+
+    key = 0 ; a_cipher = Cipher.new(key)
     until a_cipher.reverse_rotate(string[-1]).match?('d')
-      require "pry"; binding.pry
-      a_cipher = Cipher.new(key)
-      key +=1
+      a_cipher = Cipher.new(key) ; key +=1
     end
 
-    # key = 0
-    # until decrypt(string, masterkey, ddmmyy)[:decryption][-2].match?('n')
-    #   b_cipher = Cipher.new(key)
-    #   key +=1
-    # end
-    # key = 0
-    # until decrypt(string, masterkey, ddmmyy)[:decryption][-3].match?('e')
-    #   c_cipher = Cipher.new(key)
-    #   key +=1
-    # end
-    # key = 0
-    # until decrypt(string, masterkey, ddmmyy)[:decryption][-4].match?(' ')
-    #   d_cipher = Cipher.new(key)
-    #   key +=1
-    # end
+    key = 0 ; b_cipher = Cipher.new(key)
+    until b_cipher.reverse_rotate(string[-2]).match?('n')
+      b_cipher = Cipher.new(key) ; key +=1
+    end
 
-    # require "pry"; binding.pry
-    # decrypt(string, masterkey, ddmmyy)
+    key = 0 ; c_cipher = Cipher.new(key)
+    until c_cipher.reverse_rotate(string[-3]).match?('e')
+      c_cipher = Cipher.new(key) ; key +=1
+    end
 
-  end
+    key = 0 ; d_cipher = Cipher.new(key)
+    until d_cipher.reverse_rotate(string[-4]).match?(' ')
+      d_cipher = Cipher.new(key) ; key +=1
+    end
+
+    ciphers = [a_cipher, b_cipher, c_cipher, d_cipher]
+
+    counter = 0 ;   retval = '' ; string = string.downcase
+    string.split('').reverse_each { |letter|
+      retval += letter unless lowcase?(letter)
+      retval += ciphers[counter % 4].reverse_rotate(letter) if lowcase?(letter)
+      counter += 1 if lowcase?(letter)
+      } ; retval.reverse
+    end
 
 end

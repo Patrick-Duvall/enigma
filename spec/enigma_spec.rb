@@ -87,7 +87,7 @@ describe Enigma do
 
     it 'cracks a code without a date or key not using todays date', :focus do
       enigma = Enigma.new
-      expect("hello world end").to eq(enigma.crack("vjqtbeaweqihssi"))
+      expect("hello world end").to eq(enigma.smartcrack("vjqtbeaweqihssi"))
     end
 
   end
