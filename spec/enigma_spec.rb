@@ -28,7 +28,8 @@ describe Enigma do
 
   it 'encrypts a message without a date' do
     enigma = Enigma.new
-    expect(enigma.encrypt).to be_a(Hash)
+    expect(enigma.encrypt("hello world", "02715")).to be_a(Hash)
+    expect(enigma.encrypt("hello world", "02715")[:date]).to match(/\d{6}/)
   end
 
   it 'makes ciphers' do
