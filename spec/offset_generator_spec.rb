@@ -7,7 +7,8 @@ require "./spec/spec_helper"
     end
 
     it 'converts a todays date to 6 digit ddmmyy format' do
-      expect('120419').to eq( OffsetGenerator.convert_date)
+      Time.stub(:now){Time.new(2019, 04, 14, 01, 04, 44)}
+      expect('140419').to eq( OffsetGenerator.convert_date)
     end
 
     it 'uses todays date if no date given' do
