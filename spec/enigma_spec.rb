@@ -85,4 +85,9 @@ describe Enigma do
     end
 
 
+    it 'cracks a code without a date or key not using todays date' do
+      enigma = Enigma.new
+      expect("hello world end").to eq(enigma.crack("vjqtbeaweqihssi"))
+    end
+
   end
