@@ -9,7 +9,7 @@ class Cipher
 
   def rotate(letter)
      num = @rotor.find{|k,v| v == letter }[0]
-     num = (num + key) % 27 
+     num = (num + key) % 27
      @rotor[num]
   end
 

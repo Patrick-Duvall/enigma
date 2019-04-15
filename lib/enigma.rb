@@ -61,4 +61,34 @@ class Enigma
     cipher_keys.map{|key|Cipher.new(key)}
   end
 
+  def smartcrack(string)
+    # key = 0
+    # a_cipher = Cipher.new(key)
+    # until a_cipher.reverse_rotate(string[-1]).match?('d')
+    #   require "pry"; binding.pry
+    #   a_cipher = Cipher.new(key)
+    #   key +=1
+    # end
+
+    # key = 0
+    # until decrypt(string, masterkey, ddmmyy)[:decryption][-2].match?('n')
+    #   b_cipher = Cipher.new(key)
+    #   key +=1
+    # end
+    # key = 0
+    # until decrypt(string, masterkey, ddmmyy)[:decryption][-3].match?('e')
+    #   c_cipher = Cipher.new(key)
+    #   key +=1
+    # end
+    # key = 0
+    # until decrypt(string, masterkey, ddmmyy)[:decryption][-4].match?(' ')
+    #   d_cipher = Cipher.new(key)
+    #   key +=1
+    # end
+
+    # require "pry"; binding.pry
+    # decrypt(string, masterkey, ddmmyy)
+
+  end
+
 end
