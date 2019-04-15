@@ -25,18 +25,13 @@ class Enigma
   end
 
   def crack(string, ddmmyy=OffsetGenerator.convert_date)
-    masterkey = KeyGenerator.make_master
-    # require "pry"; binding.pry
+    masterkey = "00001"
     until decrypt(string, masterkey, ddmmyy)[:decryption][-4..-1].match?(' end')
-      # require "pry"; binding.pry
-       masterkey = KeyGenerator.make_master
+      masterkey = (masterkey.to_i) + 1
+      masterkey = ('0'+ masterkey.to_s) until masterkey.to_s.length == 5
+      masterkey
     end
-      decrypted = reverse_rotate(string, masterkey, ddmmyy)
-      {
-        decryption: decrypted,
-        key: masterkey,
-        date: ddmmyy
-      }
+    decrypt(string, masterkey, ddmmyy)
   end
 
   def rotate(string, masterkey, ddmmyy)
