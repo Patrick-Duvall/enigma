@@ -8,12 +8,16 @@ end
 input = ARGV[0]
 output = ARGV[1]
 
-to_decrypt = File.read(ARGV[0])
+to_decrypt = File.read(ARGV[0]).chomp
 
 enigma = Enigma.new
 ARGV[2] ? date = ARGV[2] : date = OffsetGenerator.convert_date
+
+
+answer = enigma.crack(to_decrypt, date)
 require "pry"; binding.pry
-decrypted = enigma.crack(to_decrypt, date)[:encryption]
+decrypted = answer[:decryption]
+masterkey = answer[:key]
 
 File.write(output, decrypted)
-puts "Created '#{output}' with the key #{master_key} and date #{date}"
+puts "Created '#{output}' with the key #{masterkey} and date #{date}"

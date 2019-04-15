@@ -25,7 +25,7 @@ class Enigma
   end
 
   def crack(string, ddmmyy=OffsetGenerator.convert_date)
-    masterkey = "00001"
+    masterkey = "00000"
     until decrypt(string, masterkey, ddmmyy)[:decryption][-4..-1].match?(' end')
       masterkey = (masterkey.to_i) + 1
       masterkey = ('0'+ masterkey.to_s) until masterkey.to_s.length == 5
