@@ -73,5 +73,16 @@ describe Enigma do
       expect(expected).to eq(enigma.crack("vjqtbeaweqihssi", "291018"))
     end
 
+    it 'cracks a code without date' do
+      enigma = Enigma.new
+      expected = {
+        decryption: "hello world end",
+        date: "291018",
+        key: "08304"
+      }
+      Time.stub(:now){Time.new(2018, 10, 29, 01, 04, 44)}
+      expect(expected).to eq(enigma.crack("vjqtbeaweqihssi"))
+    end
+
 
   end
