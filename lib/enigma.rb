@@ -24,6 +24,8 @@ class Enigma
     }
   end
 
+  def crack
+
   def rotate(string, masterkey, ddmmyy)
     ciphers = make_ciphers(masterkey, ddmmyy)
     counter = 0 ;   retval = '' ; string = string.downcase

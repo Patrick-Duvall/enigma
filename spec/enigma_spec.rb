@@ -51,5 +51,14 @@ describe Enigma do
       expect(enigma.reverse_rotate("keder ohulw", "02715", "040895")).to eq("hello world")
     end
 
+    it 'cracks a code with a date' do
+      enigma = Enigma.new
+      expected = {
+        decryption: "hello world end",
+        date: "291018",
+        key: "08304"
+      }
+      expect(expected).to eq(enigma.crack("vjqtbeaweqihssi", "291018"))
+
 
   end

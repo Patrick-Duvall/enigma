@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-04-15T09:32:46-06:00">2019-04-15T09:32:46-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-04-15T09:37:17-06:00">2019-04-15T09:37:17-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">99.03%</span></span>
+    (<span class="covered_percent"><span class="green">100.0%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         13.05
+         13.03
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>7</b> files in total.
-    <b>103</b> relevant lines. 
-    <span class="green"><b>102</b> lines covered</span> and
-    <span class="red"><b>1</b> lines missed </span>
+    <b>104</b> relevant lines. 
+    <span class="green"><b>104</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -73,11 +73,11 @@
       <tr>
         <td class="strong"><a href="#c0e375ca29950ba0f306f8ea0246c4350eba583d" class="src_link" title="lib/key_generator.rb">lib/key_generator.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>12</td>
-        <td>6</td>
-        <td>6</td>
+        <td>13</td>
+        <td>7</td>
+        <td>7</td>
         <td>0</td>
-        <td>2.3</td>
+        <td>2.9</td>
       </tr>
       
       <tr>
@@ -102,12 +102,12 @@
       
       <tr>
         <td class="strong"><a href="#32b9f269500bae04a22cbf834463b576dacf3220" class="src_link" title="spec/key_generator_spec.rb">spec/key_generator_spec.rb</a></td>
-        <td class="yellow strong">88.89 %</td>
+        <td class="green strong">100.0 %</td>
         <td>17</td>
         <td>9</td>
-        <td>8</td>
-        <td>1</td>
-        <td>0.9</td>
+        <td>9</td>
+        <td>0</td>
+        <td>1.4</td>
       </tr>
       
       <tr>
@@ -219,7 +219,7 @@
         <li class="covered" data-hits="25" data-linenumber="12">
           <span class="hits">25</span>
           
-          <code class="ruby">     num = (num + key) % 27</code>
+          <code class="ruby">     num = (num + key) % 27 if forward = true</code>
         </li>
       
         <li class="covered" data-hits="25" data-linenumber="13">
@@ -629,8 +629,8 @@
     <h3>lib/key_generator.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>6</b> relevant lines. 
-      <span class="green"><b>6</b> lines covered</span> and
+      <b>7</b> relevant lines. 
+      <span class="green"><b>7</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -656,8 +656,8 @@
           <code class="ruby">  def self.generate(master = self.make_master)</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="4">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="8" data-linenumber="4">
+          <span class="hits">8</span>
           
           <code class="ruby">    keys = [master[0..1], master[1..2],master[2..3],master[3..4]].map(&amp;:to_i)</code>
         </li>
@@ -680,31 +680,37 @@
           <code class="ruby">  def self.make_master</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="8">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="8">
+          <span class="hits">3</span>
           
           <code class="ruby">    master = rand(1..99999).to_s</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="9">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="9">
+          <span class="hits">3</span>
           
           <code class="ruby">    master = (&#39;0&#39; + master) until master.length == 5</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="covered" data-hits="3" data-linenumber="10">
+          <span class="hits">3</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    master</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="11">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby">end</code>
@@ -1158,11 +1164,11 @@
         <div class="source_table" id="32b9f269500bae04a22cbf834463b576dacf3220">
   <div class="header">
     <h3>spec/key_generator_spec.rb</h3>
-    <h4><span class="yellow">88.89 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>9</b> relevant lines. 
-      <span class="green"><b>8</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <span class="green"><b>9</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -1253,8 +1259,8 @@
           <code class="ruby">      expect(KeyGenerator.generate().length).to eq(4)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="15">
-          
+        <li class="covered" data-hits="5" data-linenumber="15">
+          <span class="hits">5</span>
           
           <code class="ruby">      expect(KeyGenerator.generate().each{|el| el.is_a?(Integer)})</code>
         </li>
