@@ -26,6 +26,12 @@ describe Enigma do
     expect(expected).to eq(enigma.encrypt("hello world", "02715", "040895"))
   end
 
+  it 'encrypts a message without a date' do
+    enigma = Enigma.new
+    expect(enigma.encrypt("hello world", "02715")).to be_a(Hash)
+    expect(enigma.encrypt("hello world", "02715")[:date]).to match(/\d{6}/)
+  end
+
   it 'makes ciphers' do
     enigma = Enigma.new
     expect(enigma.make_ciphers('02715', '040895').each{|cipher| cipher.is_a?(Cipher)})
@@ -49,6 +55,16 @@ describe Enigma do
     it 'reverse rotates a string' do
       enigma = Enigma.new
       expect(enigma.reverse_rotate("keder ohulw", "02715", "040895")).to eq("hello world")
+    end
+
+    it 'cracks a code with a date' do
+      enigma = Enigma.new
+      expected = {
+        decryption: "hello world end",
+        date: "291018",
+        key: "08304"
+      }
+      expect(expected).to eq(enigma.crack("vjqtbeaweqihssi", "291018"))
     end
 
 
