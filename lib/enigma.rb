@@ -62,13 +62,13 @@ class Enigma
   end
 
   def smartcrack(string)
-    # key = 0
-    # a_cipher = Cipher.new(key)
-    # until a_cipher.reverse_rotate(string[-1]).match?('d')
-    #   require "pry"; binding.pry
-    #   a_cipher = Cipher.new(key)
-    #   key +=1
-    # end
+    key = 0
+    a_cipher = Cipher.new(key)
+    until a_cipher.reverse_rotate(string[-1]).match?('d')
+      require "pry"; binding.pry
+      a_cipher = Cipher.new(key)
+      key +=1
+    end
 
     # key = 0
     # until decrypt(string, masterkey, ddmmyy)[:decryption][-2].match?('n')

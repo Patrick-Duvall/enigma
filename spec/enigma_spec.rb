@@ -73,7 +73,7 @@ describe Enigma do
       expect(expected).to eq(enigma.crack("vjqtbeaweqihssi", "291018"))
     end
 
-    it 'cracks a code without date' do
+    it 'cracks a code without date'  do
       enigma = Enigma.new
       expected = {
         decryption: "hello world end",
@@ -85,7 +85,7 @@ describe Enigma do
     end
 
 
-    it 'cracks a code without a date or key not using todays date' do
+    it 'cracks a code without a date or key not using todays date', :focus do
       enigma = Enigma.new
       expect("hello world end").to eq(enigma.crack("vjqtbeaweqihssi"))
     end
