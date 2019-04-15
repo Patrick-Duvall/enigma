@@ -24,7 +24,9 @@ class Enigma
     }
   end
 
-  def crack
+  def crack(string, ddmmyy)
+
+  end
 
   def rotate(string, masterkey, ddmmyy)
     ciphers = make_ciphers(masterkey, ddmmyy)

@@ -26,6 +26,11 @@ describe Enigma do
     expect(expected).to eq(enigma.encrypt("hello world", "02715", "040895"))
   end
 
+  it 'encrypts a message without a date' do
+    enigma = Enigma.new
+    expect(enigma.encrypt).to be_a(Hash)
+  end
+
   it 'makes ciphers' do
     enigma = Enigma.new
     expect(enigma.make_ciphers('02715', '040895').each{|cipher| cipher.is_a?(Cipher)})
@@ -59,6 +64,7 @@ describe Enigma do
         key: "08304"
       }
       expect(expected).to eq(enigma.crack("vjqtbeaweqihssi", "291018"))
+    end
 
 
   end
