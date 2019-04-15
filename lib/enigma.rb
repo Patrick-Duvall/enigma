@@ -6,7 +6,7 @@ class Enigma
     letter.match?(/[a-z ]/)
   end
 
-  def encrypt(string, masterkey, ddmmyy = OffsetGenerator.convert_date)
+  def encrypt(string, masterkey, ddmmyy=OffsetGenerator.convert_date)
     encrypted = rotate(string, masterkey, ddmmyy)
     {
       encryption: encrypted,
@@ -15,7 +15,7 @@ class Enigma
     }
   end
 
-  def decrypt(string, masterkey, ddmmyy)
+  def decrypt(string, masterkey, ddmmyy=OffsetGenerator.convert_date)
     decrypted = reverse_rotate(string, masterkey, ddmmyy)
     {
       decryption: decrypted,

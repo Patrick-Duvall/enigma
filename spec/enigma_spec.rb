@@ -52,6 +52,12 @@ describe Enigma do
       expect(expected).to eq(enigma.decrypt("keder ohulw", "02715", "040895"))
     end
 
+    it 'decrypts a message without a date' do
+      enigma = Enigma.new
+      expect(enigma.decrypt("hello world", "02715")).to be_a(Hash)
+      expect(enigma.decrypt("hello world", "02715")[:date]).to match(/\d{6}/)
+    end
+
     it 'reverse rotates a string' do
       enigma = Enigma.new
       expect(enigma.reverse_rotate("keder ohulw", "02715", "040895")).to eq("hello world")
