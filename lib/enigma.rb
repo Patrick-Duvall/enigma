@@ -7,7 +7,8 @@ class Enigma
   end
 
   def encrypt(string, masterkey, ddmmyy=OffsetGenerator.convert_date)
-    encrypted = rotate(string, masterkey, ddmmyy)
+    ciphers = make_ciphers(masterkey, ddmmyy)
+    encrypted = rotate(string, ciphers)
     {
       encryption: encrypted,
       key: masterkey,
@@ -16,7 +17,8 @@ class Enigma
   end
 
   def decrypt(string, masterkey, ddmmyy=OffsetGenerator.convert_date)
-    decrypted = reverse_rotate(string, masterkey, ddmmyy)
+    ciphers = make_ciphers(masterkey, ddmmyy)
+    decrypted = reverse_rotate(string, ciphers)
     {
       decryption: decrypted,
       key: masterkey,
@@ -34,8 +36,7 @@ class Enigma
     decrypt(string, masterkey, ddmmyy)
   end
 
-  def rotate(string, masterkey, ddmmyy)
-    ciphers = make_ciphers(masterkey, ddmmyy)
+  def rotate(string, ciphers)
     counter = 0 ;   retval = '' ; string = string.downcase
     string.split('').each do |letter|
       retval += letter unless lowcase?(letter)
@@ -44,8 +45,7 @@ class Enigma
     end ; retval
   end
 
-  def reverse_rotate(string, masterkey, ddmmyy)
-    ciphers = make_ciphers(masterkey, ddmmyy)
+  def reverse_rotate(string, ciphers)
     counter = 0 ;   retval = '' ; string = string.downcase
     string.split('').each { |letter|
       retval += letter unless lowcase?(letter)
@@ -62,29 +62,23 @@ class Enigma
   end
 
   def smartcrack(string)
-
     key = 0 ; a_cipher = Cipher.new(key)
     until a_cipher.reverse_rotate(string[-1]).match?('d')
       a_cipher = Cipher.new(key) ; key +=1
     end
-
     key = 0 ; b_cipher = Cipher.new(key)
     until b_cipher.reverse_rotate(string[-2]).match?('n')
       b_cipher = Cipher.new(key) ; key +=1
     end
-
     key = 0 ; c_cipher = Cipher.new(key)
     until c_cipher.reverse_rotate(string[-3]).match?('e')
       c_cipher = Cipher.new(key) ; key +=1
     end
-
     key = 0 ; d_cipher = Cipher.new(key)
     until d_cipher.reverse_rotate(string[-4]).match?(' ')
       d_cipher = Cipher.new(key) ; key +=1
     end
-
     ciphers = [a_cipher, b_cipher, c_cipher, d_cipher]
-
     counter = 0 ;   retval = '' ; string = string.downcase
     string.split('').reverse_each { |letter|
       retval += letter unless lowcase?(letter)
