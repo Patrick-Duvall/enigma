@@ -39,7 +39,7 @@ describe Enigma do
 
     it 'rotates a string' do
       enigma = Enigma.new
-      expect(enigma.rotate("hello world", "02715", "040895")).to eq("keder ohulw")
+      expect(enigma.rotate("hello world", enigma.make_ciphers("02715", "040895"))).to eq("keder ohulw")
     end
 
     it 'decrypts a message with key and date' do
@@ -49,7 +49,7 @@ describe Enigma do
         date: "040895"
       }
       enigma = Enigma.new
-      expect(expected).to eq(enigma.decrypt("keder ohulw", "02715", "040895"))
+      expect(expected).to eq(enigma.decrypt("keder ohulw","02715", "040895"))
     end
 
     it 'decrypts a message without a date' do
@@ -60,7 +60,7 @@ describe Enigma do
 
     it 'reverse rotates a string' do
       enigma = Enigma.new
-      expect(enigma.reverse_rotate("keder ohulw", "02715", "040895")).to eq("hello world")
+      expect(enigma.reverse_rotate("keder ohulw", enigma.make_ciphers("02715", "040895"))).to eq("hello world")
     end
 
     it 'cracks a code with a date' do
@@ -73,7 +73,7 @@ describe Enigma do
       expect(expected).to eq(enigma.crack("vjqtbeaweqihssi", "291018"))
     end
 
-    it 'cracks a code without date' do
+    it 'cracks a code without date'  do
       enigma = Enigma.new
       expected = {
         decryption: "hello world end",
@@ -84,5 +84,10 @@ describe Enigma do
       expect(expected).to eq(enigma.crack("vjqtbeaweqihssi"))
     end
 
+
+    it 'cracks a code without a date or key not using todays date' do
+      enigma = Enigma.new
+      expect("hello world end").to eq(enigma.smartcrack("vjqtbeaweqihssi"))
+    end
 
   end
