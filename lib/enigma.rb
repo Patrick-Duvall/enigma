@@ -42,7 +42,8 @@ class Enigma
       retval += letter unless lowcase?(letter)
       retval += ciphers[counter % 4].rotate(letter) if lowcase?(letter)
       counter += 1 if lowcase?(letter)
-    end ; retval
+    end
+    retval
   end
 
   def reverse_rotate(string, ciphers)
@@ -51,7 +52,8 @@ class Enigma
       retval += letter unless lowcase?(letter)
       retval += ciphers[counter % 4].reverse_rotate(letter) if lowcase?(letter)
       counter += 1 if lowcase?(letter)
-      } ; retval
+      }
+      retval
   end
 
   def make_ciphers(masterkey, ddmmyy)

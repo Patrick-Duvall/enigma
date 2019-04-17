@@ -15,7 +15,6 @@ ARGV[2] ? date = ARGV[2] : date = OffsetGenerator.convert_date
 
 
 answer = enigma.crack(to_decrypt, date)
-require "pry"; binding.pry
 decrypted = answer[:decryption]
 masterkey = answer[:key]
 
