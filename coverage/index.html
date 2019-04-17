@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-04-17T08:49:56-06:00">2019-04-17T08:49:56-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-04-17T10:08:53-06:00">2019-04-17T10:08:53-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,7 +25,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.89
+         12.1
        </span>
     </span> hits/line)
   </h2>
@@ -57,7 +57,7 @@
         <td>15</td>
         <td>12</td>
         <td>3</td>
-        <td>15.3</td>
+        <td>49.6</td>
       </tr>
       
       <tr>
@@ -67,7 +67,7 @@
         <td>58</td>
         <td>24</td>
         <td>34</td>
-        <td>1.6</td>
+        <td>4.9</td>
       </tr>
       
       <tr>
@@ -216,20 +216,20 @@
           <code class="ruby">  def reverse_rotate(letter)</code>
         </li>
       
-        <li class="covered" data-hits="188" data-linenumber="17">
-          <span class="hits">188</span>
+        <li class="covered" data-hits="641" data-linenumber="17">
+          <span class="hits">641</span>
           
           <code class="ruby">    num = @rotor.find{|k,v| v == letter }[0]</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="18">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="41" data-linenumber="18">
+          <span class="hits">41</span>
           
           <code class="ruby">    num = (num - key) % 27</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="19">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="41" data-linenumber="19">
+          <span class="hits">41</span>
           
           <code class="ruby">    @rotor[num]</code>
         </li>
@@ -295,8 +295,8 @@
           <code class="ruby">  def lowcase?(letter)</code>
         </li>
       
-        <li class="covered" data-hits="33" data-linenumber="6">
-          <span class="hits">33</span>
+        <li class="covered" data-hits="129" data-linenumber="6">
+          <span class="hits">129</span>
           
           <code class="ruby">    letter.match?(/[a-z ]/)</code>
         </li>
@@ -571,20 +571,20 @@
           <code class="ruby">    string.split(&#39;&#39;).each { |letter|</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="52">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="43" data-linenumber="52">
+          <span class="hits">43</span>
           
           <code class="ruby">      retval += letter unless lowcase?(letter)</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="53">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="43" data-linenumber="53">
+          <span class="hits">43</span>
           
           <code class="ruby">      retval += ciphers[counter % 4].reverse_rotate(letter) if lowcase?(letter)</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="54">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="43" data-linenumber="54">
+          <span class="hits">43</span>
           
           <code class="ruby">      counter += 1 if lowcase?(letter)</code>
         </li>
