@@ -14,6 +14,5 @@ enigma = Enigma.new
 master_key = ARGV[2]
 date =  ARGV[3]
 decrypted = enigma.decrypt(to_decrypt, master_key, date)[:decryption]
-require "pry"; binding.pry
 File.write(output, decrypted)
 puts "Created '#{output}' with the key #{master_key} and date #{date}"
